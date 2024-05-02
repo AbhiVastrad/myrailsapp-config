@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: myapp
+spec:
+  destination:
+    namespace: default
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    repoURL: https://github.com/AbhiVastrad/myrailsapp-config
+    path: C:\Users\ABHI\myrailsapp-config\kubernetes-manifests/rails-deployment.yaml kubernetes-manifests/postgres-statefulset.yaml
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+
