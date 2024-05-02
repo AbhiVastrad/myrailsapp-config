@@ -8,4 +8,5 @@ data:
     - url: https://github.com/AbhiVastrad/myrailsapp-config
       type: git
       name: myrailsapp
+  cors.origins: "*"
 
